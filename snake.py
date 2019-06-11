@@ -9,6 +9,12 @@ class Head:
         self.y=y
         self.speed=speed
         self.direction = 0
+        self.length=3
+        self.updateCountMax = 2
+        self.updateCount = 0
+            for i in range(0,length):
+        self.x.append(0)
+        self.y.append(0)
 
     def update(self):
         if self.direction == 0:
@@ -33,7 +39,9 @@ class Head:
         self.direction = 3
     
     #render script
-    def draw()
+    def draw(self, surface, image):
+        for i in range(0,self.length):
+            surface.blit(image,(self.x[i],self.y[i])) 
 
 #define window
 
